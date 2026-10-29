@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: week9-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: week9
+  template:
+    metadata:
+      labels:
+        app: week9
+    spec:
+      containers:
+      - name: week6-app
+        image: sirivarshini43/week9:week9
+        ports:
+        - containerPort: 5000
