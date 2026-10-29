@@ -1,13 +1,13 @@
-apiVersion: apps/v1
-kind: Deployment
+
+apiVersion: v1
+kind: Service
 metadata:
   name: week9-service
 spec:
+  type: NodePort
   selector:
-    matchLabels:
-      app: week9
-   ports:
+    app: week9
+  ports:
     - protocol: TCP
       port: 5000
       targetPort: 5000
-      nodePort: 30227
