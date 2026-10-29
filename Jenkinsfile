@@ -1,5 +1,8 @@
 pipeline {
  agent any
+ environment {
+        KUBECONFIG = 'C:\\Users\\siriv\\.kube\\config'
+    }
  stages {
  stage('Build Docker Image') {
  steps {
