@@ -22,6 +22,9 @@ pipeline {
                 bat 'docker push sirivarshini43/week9:week9'
             }
         }
+        environment {
+        KUBECONFIG = 'C:\\Users\\siriv\\.kube\\config'
+    }
         stage('Deploy to Kubernetes') {
             steps {
                 echo 'Deploying to Kubernetes...'
