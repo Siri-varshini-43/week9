@@ -6,9 +6,8 @@ spec:
   selector:
     matchLabels:
       app: week9
-  ports:
+   ports:
     - protocol: TCP
       port: 5000
       targetPort: 5000
-      nodePort: 30007
-      type: NodePort
+      nodePort: 30227
